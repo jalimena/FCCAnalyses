@@ -133,7 +133,7 @@ $(function() {
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>  ROOT::VecOps::RVec&lt;edm4hep::ReconstructedParticleData&gt; <a class="code hl_function" href="namespace_f_c_c_analyses_1_1_vertexing_utils.html#a8a96b39bedab3e7054366aeccd50f86e">SelPrimaryTracks</a>( ROOT::VecOps::RVec&lt;int&gt; recind,</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>                                       ROOT::VecOps::RVec&lt;int&gt; mcind,</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                                       ROOT::VecOps::RVec&lt;edm4hep::ReconstructedParticleData&gt; reco,</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                                       ROOT::VecOps::RVec&lt;edm4hep::MCParticleData&gt; mc,</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                                       ROOT::VecOps::RVec&lt;edm4hep::MCParticleData&gt; <a class="code hl_variable" href="namespace_f_c_c_analyses_1_1_m_c_particle.html#a06748973f37312d4881bd67742adce49">mc</a>,</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                                       TVector3 MC_EventPrimaryVertex) ;</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>  <span class="keywordtype">int</span> <a class="code hl_function" href="namespace_f_c_c_analyses_1_1_vertexing_utils.html#ae259aba0c683932f5a80ee0151fd35f7">get_Nvertex</a>( ROOT::VecOps::RVec&lt;FCCAnalysesVertex&gt; TheVertexColl );</div>
@@ -164,6 +164,7 @@ $(function() {
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>}<span class="comment">//end NS FCCAnalyses</span></div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="anamespace_f_c_c_analyses_1_1_m_c_particle_html_a06748973f37312d4881bd67742adce49"><div class="ttname"><a href="namespace_f_c_c_analyses_1_1_m_c_particle.html#a06748973f37312d4881bd67742adce49">FCCAnalyses::MCParticle::mc</a></div><div class="ttdeci">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD:analyzers/dataframe/MCParticle.h=======ROOT::VecOps::RVec&lt; int &gt; get_indices_ExclusiveDecay_MotherByIndex(int imother, std::vector&lt; int &gt; m_pdg_daughters, bool m_stableDaughters, ROOT::VecOps::RVec&lt; edm4hep::MCParticleData &gt; in, ROOT::VecOps::RVec&lt; int &gt; ind);&gt; &gt; &gt; &gt; &gt; &gt; ROOT::VecOps::RVec&lt; edm4hep::MCParticleData &gt; mc</div><div class="ttdef"><b>Definition:</b> MCParticle.h:119</div></div>
 <div class="ttc" id="anamespace_f_c_c_analyses_1_1_vertexing_utils_html_a1fab62e78096ec5b58256889627bdd46"><div class="ttname"><a href="namespace_f_c_c_analyses_1_1_vertexing_utils.html#a1fab62e78096ec5b58256889627bdd46">FCCAnalyses::VertexingUtils::get_nTracks</a></div><div class="ttdeci">int get_nTracks(ROOT::VecOps::RVec&lt; edm4hep::TrackState &gt; tracks)</div><div class="ttdoc">Return the number of tracks in a given track collection.</div><div class="ttdef"><b>Definition:</b> VertexingUtils.cc:72</div></div>
 <div class="ttc" id="anamespace_f_c_c_analyses_1_1_vertexing_utils_html_a2d9a8e8d87409a8f6d22cbee921e0d16"><div class="ttname"><a href="namespace_f_c_c_analyses_1_1_vertexing_utils.html#a2d9a8e8d87409a8f6d22cbee921e0d16">FCCAnalyses::VertexingUtils::CovToACTS</a></div><div class="ttdeci">TMatrixDSym CovToACTS(TMatrixDSym Cov, TVectorD Par)</div><div class="ttdef"><b>Definition:</b> VertexingUtils.cc:215</div></div>
 <div class="ttc" id="anamespace_f_c_c_analyses_1_1_vertexing_utils_html_a3eaaef5d0f40f4b3ba9748b75953e462"><div class="ttname"><a href="namespace_f_c_c_analyses_1_1_vertexing_utils.html#a3eaaef5d0f40f4b3ba9748b75953e462">FCCAnalyses::VertexingUtils::get_trackCov</a></div><div class="ttdeci">TMatrixDSym get_trackCov(edm4hep::TrackState &amp;atrack)</div><div class="ttdef"><b>Definition:</b> VertexingUtils.cc:104</div></div>
@@ -202,7 +203,7 @@ $(function() {
 <!-- HTML footer for doxygen 1.8.15-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Oct 12 2022 15:22:55 for FCCAnalyses by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Oct 12 2022 15:24:54 for FCCAnalyses by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.9.3
 </small></address>
