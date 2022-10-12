@@ -1,79 +1,84 @@
 
-find_package(ROOT REQUIRED COMPONENTS ROOTDataFrame ROOTVecOps TMVA)
-include(${ROOT_USE_FILE})
-#include("${ROOT_DIR}/modules/RootNewMacros.cmake")
 
+# workaround for ROOT not properly exporting the VDT includes
 find_package(Vdt)
 
-set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake ${CMAKE_MODULE_PATH})
-
-get_target_property(EDM4HEP_INCLUDE_DIRS EDM4HEP::edm4hep INTERFACE_INCLUDE_DIRECTORIES)
-
-include_directories(${EDM4HEP_INCLUDE_DIRS} 
-                    ${podio_INCLUDE_DIR}
-                    ${FASTJET_INCLUDE_DIR} 
-                    ${acts_INCLUDE_DIR}
-                    ${AWKWARD_INCLUDE}
-                    ${VDT_INCLUDE_DIR}
-                    )
 
 message(STATUS "includes-------------------------- dataframe awkward: ${AWKWARD_INCLUDE}")
 message(STATUS "includes-------------------------- dataframe edm4hep: ${EDM4HEP_INCLUDE_DIRS}")
 message(STATUS "includes-------------------------- dataframe podio  : ${podio_INCLUDE_DIR}")
-message(STATUS "includes-------------------------- dataframe fastjet: ${FASTJET_INCLUDE_DIRS}")
 
 
+file(GLOB sources src/*.cc)
+file(GLOB headers RELATIVE ${CMAKE_CURRENT_LIST_DIR} FCCAnalyses/*.h)
 
-file(GLOB sources *.cc)
-file(GLOB headers *.h)
+message(STATUS "includes headers ${headers}")
+message(STATUS "includes sources ${sources}")
+
 list(FILTER headers EXCLUDE REGEX "LinkDef.h")
-if(NOT ${WITH_DD4HEP})
+if(NOT WITH_DD4HEP)
   list(FILTER headers EXCLUDE REGEX "CaloNtupleizer.h")
   list(FILTER sources EXCLUDE REGEX "CaloNtupleizer.cc")
 endif()
+if(NOT WITH_ONNX)
+  list(FILTER headers EXCLUDE REGEX "JetFlavourUtils.h")
+  list(FILTER sources EXCLUDE REGEX "JetFlavourUtils.cc")
+endif()
 
-ROOT_GENERATE_DICTIONARY(G__FCCAnalyses
-                         ${headers}
-                         LINKDEF LinkDef.h
-                         )
+if(NOT WITH_ACTS)
+  list(FILTER headers EXCLUDE REGEX "VertexFitterActs.h")
+  list(FILTER sources EXCLUDE REGEX "VertexFitterActs.cc")
+  list(FILTER headers EXCLUDE REGEX "VertexFinderActs.h")
+  list(FILTER sources EXCLUDE REGEX "VertexFinderActs.cc")
+endif()
 
-add_library(FCCAnalyses SHARED ${sources} ${headers} G__FCCAnalyses.cxx )
+
+message(STATUS "CMAKE_CURRENT_SOURCE_DIR  ${CMAKE_CURRENT_SOURCE_DIR}")
+message(STATUS "CMAKE_INSTALL_INCLUDEDIR  ${CMAKE_INSTALL_INCLUDEDIR}")
+
+add_library(FCCAnalyses SHARED  ${sources} ${headers} )
 target_include_directories(FCCAnalyses  PUBLIC
                            $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>
-                           $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>
-                           ${FCCEDM_INCLUDE_DIRS}
-                           ${FASTJET_INCLUDE_DIR}
-                           ${acts_INCLUDE_DIR}
+                           $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/addons>
+                           $<INSTALL_INTERFACE:include>
+                           ${VDT_INCLUDE_DIR}
                            ${AWKWARD_INCLUDE}
                            )
 
-target_link_libraries(FCCAnalyses 
+
+
+target_link_libraries(FCCAnalyses
                       ROOT::Physics
                       ROOT::MathCore
                       ROOT::ROOTVecOps
                       ROOT::ROOTDataFrame
-                      ROOT::TMVA
                       EDM4HEP::edm4hep
                       EDM4HEP::edm4hepDict
                       podio::podio
-                      ${FASTJET_LIBRARY}
-                      ${FASTJET_LIBRARY_DIRS}/libfastjetplugins.so
-                      ${acts_LIBRARY}
-                      ActsCore
                       #${AWKWARD_LIBRARIES}
                       ${LIBAWKWARD}
                       ${CPU-KERNELS}
                       ${LIBDL}
+                      ${ADDONS_LIBRARIES}
                       gfortran # todo: why necessary?
                       )
 
-if(${WITH_DD4HEP})
-  find_package(DD4hep)
+if(WITH_DD4HEP)
   target_link_libraries(FCCAnalyses DD4hep::DDCore)
+endif()
+
+if(WITH_ACTS)
+  target_link_libraries(FCCAnalyses ActsCore)
 endif()
 
 set_target_properties(FCCAnalyses PROPERTIES
   PUBLIC_HEADER "${headers}")
+
+ROOT_GENERATE_DICTIONARY(G__FCCAnalyses
+                         ${headers}
+                         MODULE FCCAnalyses
+                         LINKDEF FCCAnalyses/LinkDef.h
+                         )
 
 install(TARGETS FCCAnalyses
     EXPORT FCCAnalysesTargets
