@@ -77,8 +77,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#func-members">Functions</a> &#124;
-<a href="#var-members">Variables</a>  </div>
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">FCCAnalyses::MCParticle Namespace Reference</div></div>
 </div><!--header-->
 <div class="contents">
@@ -93,6 +92,12 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_f_c_c_analyses_1_1_m_c_particle_1_1get___event_primary_vertex.html">get_EventPrimaryVertex</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">return the event primary vertex (mm)  <a href="struct_f_c_c_analyses_1_1_m_c_particle_1_1get___event_primary_vertex.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_f_c_c_analyses_1_1_m_c_particle_1_1get__indices.html">get_indices</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">return a list of indices that correspond to a given MC decay. The list contains the index of the mother, followed by the indices of the daughters, in the order specified. If m_inclusiveDecay is true, the list of daughters is the minimum required for the mother's decay (otherwise, the list is the exact daughters required for the mother's decay). In case there are several such decays in the event, keep only the first one.  <a href="struct_f_c_c_analyses_1_1_m_c_particle_1_1get__indices.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_f_c_c_analyses_1_1_m_c_particle_1_1get__indices___exclusive_decay.html">get_indices_ExclusiveDecay</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A shorthand for <a class="el" href="struct_f_c_c_analyses_1_1_m_c_particle_1_1get__indices.html" title="return a list of indices that correspond to a given MC decay. The list contains the index of the moth...">get_indices</a>, with m_chargeConjugateDaughters=false, inclusiveDecay=false.  <a href="struct_f_c_c_analyses_1_1_m_c_particle_1_1get__indices___exclusive_decay.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_f_c_c_analyses_1_1_m_c_particle_1_1get__tree.html">get_tree</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">get MC history tree for a given <a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html">MCParticle</a> index  <a href="struct_f_c_c_analyses_1_1_m_c_particle_1_1get__tree.html#details">More...</a><br /></td></tr>
@@ -109,14 +114,15 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a84485a75003fcca8f4666e269aee11c8"><td class="memItemLeft" align="right" valign="top">ROOT::VecOps::RVec&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html#a84485a75003fcca8f4666e269aee11c8">operator()</a> (ROOT::VecOps::RVec&lt; edm4hep::MCParticleData &gt; in, ROOT::VecOps::RVec&lt; int &gt; <a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html#aa02d4d5135ed1995c42677b73453f31d">ind</a>)</td></tr>
-<tr class="separator:a84485a75003fcca8f4666e269aee11c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1104a07df61b131792fe05324db45047"><td class="memItemLeft" align="right" valign="top">ROOT::VecOps::RVec&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html#a1104a07df61b131792fe05324db45047">get_indices_MotherByIndex</a> (int imother, std::vector&lt; int &gt; <a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html#a0bc0dd6f5936400ff2a0fd36e52308b9">m_pdg_daughters</a>, bool <a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html#ab4bbbc7fc8e6bdac6b9a8fc754756b1e">m_stableDaughters</a>, bool <a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html#a4ebcd0f29478a0fa1d15fbaddf31699e">m_chargeConjugateDaughters</a>, bool <a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html#aa54451e09b35432946a0c539c21c4619">m_inclusiveDecay</a>,&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD:analyzers/dataframe/MCParticle.h ROOT::VecOps::RVec&lt; edm4hep::MCParticleData &gt; in, ROOT::VecOps::RVec&lt; int &gt; <a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html#aa02d4d5135ed1995c42677b73453f31d">ind</a>)</td></tr>
-<tr class="memdesc:a1104a07df61b131792fe05324db45047"><td class="mdescLeft">&#160;</td><td class="mdescRight">return a list of indices that correspond to a given MC decay  <a href="namespace_f_c_c_analyses_1_1_m_c_particle.html#a1104a07df61b131792fe05324db45047">More...</a><br /></td></tr>
-<tr class="separator:a1104a07df61b131792fe05324db45047"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7b15b879e37adbb486291de57011e583"><td class="memItemLeft" align="right" valign="top">ROOT::VecOps::RVec&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html#a7b15b879e37adbb486291de57011e583">get_indices_ExclusiveDecay_MotherByIndex</a> (int imother, std::vector&lt; int &gt; <a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html#a0bc0dd6f5936400ff2a0fd36e52308b9">m_pdg_daughters</a>, bool <a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html#ab4bbbc7fc8e6bdac6b9a8fc754756b1e">m_stableDaughters</a>, ROOT::VecOps::RVec&lt; edm4hep::MCParticleData &gt; in, ROOT::VecOps::RVec&lt; int &gt; <a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html#aa02d4d5135ed1995c42677b73453f31d">ind</a>)</td></tr>
+<tr class="memitem:a49ecbbb111282bbaed517d64e74e7d8d"><td class="memItemLeft" align="right" valign="top">ROOT::VecOps::RVec&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html#a49ecbbb111282bbaed517d64e74e7d8d">get_indices_MotherByIndex</a> (int imother, std::vector&lt; int &gt; m_pdg_daughters, bool m_stableDaughters, bool m_chargeConjugateDaughters, bool m_inclusiveDecay, ROOT::VecOps::RVec&lt; edm4hep::MCParticleData &gt; in, ROOT::VecOps::RVec&lt; int &gt; ind)</td></tr>
+<tr class="memdesc:a49ecbbb111282bbaed517d64e74e7d8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">return a list of indices that correspond to a given MC decay  <a href="namespace_f_c_c_analyses_1_1_m_c_particle.html#a49ecbbb111282bbaed517d64e74e7d8d">More...</a><br /></td></tr>
+<tr class="separator:a49ecbbb111282bbaed517d64e74e7d8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b15b879e37adbb486291de57011e583"><td class="memItemLeft" align="right" valign="top">ROOT::VecOps::RVec&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html#a7b15b879e37adbb486291de57011e583">get_indices_ExclusiveDecay_MotherByIndex</a> (int imother, std::vector&lt; int &gt; m_pdg_daughters, bool m_stableDaughters, ROOT::VecOps::RVec&lt; edm4hep::MCParticleData &gt; in, ROOT::VecOps::RVec&lt; int &gt; ind)</td></tr>
 <tr class="memdesc:a7b15b879e37adbb486291de57011e583"><td class="mdescLeft">&#160;</td><td class="mdescRight">a shorthand for get_indices_MotherByIndex with m_chargeConjugateDaughters=false, m_inclusiveDecay =false  <a href="namespace_f_c_c_analyses_1_1_m_c_particle.html#a7b15b879e37adbb486291de57011e583">More...</a><br /></td></tr>
 <tr class="separator:a7b15b879e37adbb486291de57011e583"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad3fc05850bd780367a8e23ad085d6eb"><td class="memItemLeft" align="right" valign="top">ROOT::VecOps::RVec&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html#aad3fc05850bd780367a8e23ad085d6eb">get_parentid</a> (ROOT::VecOps::RVec&lt; int &gt; mcind, ROOT::VecOps::RVec&lt; edm4hep::MCParticleData &gt; mc, ROOT::VecOps::RVec&lt; int &gt; parents)</td></tr>
+<tr class="memdesc:aad3fc05850bd780367a8e23ad085d6eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">return the parent index of a given list of MC particles  <a href="namespace_f_c_c_analyses_1_1_m_c_particle.html#aad3fc05850bd780367a8e23ad085d6eb">More...</a><br /></td></tr>
+<tr class="separator:aad3fc05850bd780367a8e23ad085d6eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abac4eb54eeb7c5d65ebadfde194e6598"><td class="memItemLeft" align="right" valign="top">ROOT::VecOps::RVec&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html#abac4eb54eeb7c5d65ebadfde194e6598">get_time</a> (ROOT::VecOps::RVec&lt; edm4hep::MCParticleData &gt; in)</td></tr>
 <tr class="memdesc:abac4eb54eeb7c5d65ebadfde194e6598"><td class="mdescLeft">&#160;</td><td class="mdescRight">return the time of the input MCParticles  <a href="namespace_f_c_c_analyses_1_1_m_c_particle.html#abac4eb54eeb7c5d65ebadfde194e6598">More...</a><br /></td></tr>
 <tr class="separator:abac4eb54eeb7c5d65ebadfde194e6598"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -144,7 +150,7 @@ Functions</h2></td></tr>
 <tr class="memitem:ae6056dfb1769023753fdcb847fce53a5"><td class="memItemLeft" align="right" valign="top">ROOT::VecOps::RVec&lt; edm4hep::Vector3d &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html#ae6056dfb1769023753fdcb847fce53a5">get_endPoint</a> (ROOT::VecOps::RVec&lt; edm4hep::MCParticleData &gt; in)</td></tr>
 <tr class="memdesc:ae6056dfb1769023753fdcb847fce53a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">return the end point of the input MCParticles  <a href="namespace_f_c_c_analyses_1_1_m_c_particle.html#ae6056dfb1769023753fdcb847fce53a5">More...</a><br /></td></tr>
 <tr class="separator:ae6056dfb1769023753fdcb847fce53a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aec3d648ba4f437086a6140fb5904cd2b"><td class="memItemLeft" align="right" valign="top">ROOT::VecOps::RVec&lt; edm4hep::Vector3d &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html#aec3d648ba4f437086a6140fb5904cd2b">get_endPoint</a> (ROOT::VecOps::RVec&lt; edm4hep::MCParticleData &gt; in, ROOT::VecOps::RVec&lt; int &gt; <a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html#aa02d4d5135ed1995c42677b73453f31d">ind</a>)</td></tr>
+<tr class="memitem:aec3d648ba4f437086a6140fb5904cd2b"><td class="memItemLeft" align="right" valign="top">ROOT::VecOps::RVec&lt; edm4hep::Vector3d &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html#aec3d648ba4f437086a6140fb5904cd2b">get_endPoint</a> (ROOT::VecOps::RVec&lt; edm4hep::MCParticleData &gt; in, ROOT::VecOps::RVec&lt; int &gt; ind)</td></tr>
 <tr class="memdesc:aec3d648ba4f437086a6140fb5904cd2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">return the end point of the input MCParticles (not using the "endpoint" that is currently not filled)  <a href="namespace_f_c_c_analyses_1_1_m_c_particle.html#aec3d648ba4f437086a6140fb5904cd2b">More...</a><br /></td></tr>
 <tr class="separator:aec3d648ba4f437086a6140fb5904cd2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5ecd38a6257c6d48ef8a03b54aaf896"><td class="memItemLeft" align="right" valign="top">ROOT::VecOps::RVec&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html#ac5ecd38a6257c6d48ef8a03b54aaf896">get_endPoint_x</a> (ROOT::VecOps::RVec&lt; edm4hep::MCParticleData &gt; in)</td></tr>
@@ -204,74 +210,28 @@ Functions</h2></td></tr>
 <tr class="memitem:ac2c1305df7223fb14bae082b708ff9d9"><td class="memItemLeft" align="right" valign="top">ROOT::VecOps::RVec&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html#ac2c1305df7223fb14bae082b708ff9d9">AngleBetweenTwoMCParticles</a> (ROOT::VecOps::RVec&lt; edm4hep::MCParticleData &gt; p1, ROOT::VecOps::RVec&lt; edm4hep::MCParticleData &gt; p2)</td></tr>
 <tr class="memdesc:ac2c1305df7223fb14bae082b708ff9d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">return the angle (3D) between two MCParticles :  <a href="namespace_f_c_c_analyses_1_1_m_c_particle.html#ac2c1305df7223fb14bae082b708ff9d9">More...</a><br /></td></tr>
 <tr class="separator:ac2c1305df7223fb14bae082b708ff9d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9990421a544f662d780854dc0a0215dd"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html#a9990421a544f662d780854dc0a0215dd">DeltaRBetweenTwoMCParticles</a> (edm4hep::MCParticleData p1, edm4hep::MCParticleData p2)</td></tr>
-<tr class="memdesc:a9990421a544f662d780854dc0a0215dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">return delta R (3D) between two MCParticles :  <a href="namespace_f_c_c_analyses_1_1_m_c_particle.html#a9990421a544f662d780854dc0a0215dd">More...</a><br /></td></tr>
-<tr class="separator:a9990421a544f662d780854dc0a0215dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adb2bdcc98b3b5717ef7f1edf294be050"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html#adb2bdcc98b3b5717ef7f1edf294be050">get_list_of_stable_particles_from_decay</a> (int i, ROOT::VecOps::RVec&lt; edm4hep::MCParticleData &gt; in, ROOT::VecOps::RVec&lt; int &gt; <a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html#aa02d4d5135ed1995c42677b73453f31d">ind</a>)</td></tr>
+<tr class="memitem:adb2bdcc98b3b5717ef7f1edf294be050"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html#adb2bdcc98b3b5717ef7f1edf294be050">get_list_of_stable_particles_from_decay</a> (int i, ROOT::VecOps::RVec&lt; edm4hep::MCParticleData &gt; in, ROOT::VecOps::RVec&lt; int &gt; ind)</td></tr>
 <tr class="memdesc:adb2bdcc98b3b5717ef7f1edf294be050"><td class="mdescLeft">&#160;</td><td class="mdescRight">return the list of stable particles from the decay of a mother particle, looking at the full decay chain recursively. i is the mother index in the Particle block  <a href="namespace_f_c_c_analyses_1_1_m_c_particle.html#adb2bdcc98b3b5717ef7f1edf294be050">More...</a><br /></td></tr>
 <tr class="separator:adb2bdcc98b3b5717ef7f1edf294be050"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ae4f401d6f801d6562e2975004bcab0"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html#a9ae4f401d6f801d6562e2975004bcab0">get_list_of_particles_from_decay</a> (int i, ROOT::VecOps::RVec&lt; edm4hep::MCParticleData &gt; in, ROOT::VecOps::RVec&lt; int &gt; <a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html#aa02d4d5135ed1995c42677b73453f31d">ind</a>)</td></tr>
+<tr class="memitem:a9ae4f401d6f801d6562e2975004bcab0"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html#a9ae4f401d6f801d6562e2975004bcab0">get_list_of_particles_from_decay</a> (int i, ROOT::VecOps::RVec&lt; edm4hep::MCParticleData &gt; in, ROOT::VecOps::RVec&lt; int &gt; ind)</td></tr>
 <tr class="memdesc:a9ae4f401d6f801d6562e2975004bcab0"><td class="mdescLeft">&#160;</td><td class="mdescRight">return the list of particles from the decay of a mother particle. i is the mother index in the Particle block.  <a href="namespace_f_c_c_analyses_1_1_m_c_particle.html#a9ae4f401d6f801d6562e2975004bcab0">More...</a><br /></td></tr>
 <tr class="separator:a9ae4f401d6f801d6562e2975004bcab0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a04c7af9cdc145bc547aaf2b141d0fba6"><td class="memItemLeft" align="right" valign="top">edm4hep::MCParticleData&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html#a04c7af9cdc145bc547aaf2b141d0fba6">sel_byIndex</a> (int idx, ROOT::VecOps::RVec&lt; edm4hep::MCParticleData &gt; in)</td></tr>
 <tr class="memdesc:a04c7af9cdc145bc547aaf2b141d0fba6"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns one <a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html">MCParticle</a> selected by its index in the particle block  <a href="namespace_f_c_c_analyses_1_1_m_c_particle.html#a04c7af9cdc145bc547aaf2b141d0fba6">More...</a><br /></td></tr>
 <tr class="separator:a04c7af9cdc145bc547aaf2b141d0fba6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc372a6b1084028b8a9a98fb945634d2"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html#adc372a6b1084028b8a9a98fb945634d2">list_of_stable_particles_from_decay</a> (int i, ROOT::VecOps::RVec&lt; edm4hep::MCParticleData &gt; in, ROOT::VecOps::RVec&lt; int &gt; <a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html#aa02d4d5135ed1995c42677b73453f31d">ind</a>)</td></tr>
+<tr class="memitem:adc372a6b1084028b8a9a98fb945634d2"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html#adc372a6b1084028b8a9a98fb945634d2">list_of_stable_particles_from_decay</a> (int i, ROOT::VecOps::RVec&lt; edm4hep::MCParticleData &gt; in, ROOT::VecOps::RVec&lt; int &gt; ind)</td></tr>
 <tr class="memdesc:adc372a6b1084028b8a9a98fb945634d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">obsolete: should use get_list_of_stable_particles_from_decay instead  <a href="namespace_f_c_c_analyses_1_1_m_c_particle.html#adc372a6b1084028b8a9a98fb945634d2">More...</a><br /></td></tr>
 <tr class="separator:adc372a6b1084028b8a9a98fb945634d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c2cfb92bfa1b49b5eb47b6d90dba462"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html#a6c2cfb92bfa1b49b5eb47b6d90dba462">list_of_particles_from_decay</a> (int i, ROOT::VecOps::RVec&lt; edm4hep::MCParticleData &gt; in, ROOT::VecOps::RVec&lt; int &gt; <a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html#aa02d4d5135ed1995c42677b73453f31d">ind</a>)</td></tr>
+<tr class="memitem:a6c2cfb92bfa1b49b5eb47b6d90dba462"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html#a6c2cfb92bfa1b49b5eb47b6d90dba462">list_of_particles_from_decay</a> (int i, ROOT::VecOps::RVec&lt; edm4hep::MCParticleData &gt; in, ROOT::VecOps::RVec&lt; int &gt; ind)</td></tr>
 <tr class="memdesc:a6c2cfb92bfa1b49b5eb47b6d90dba462"><td class="mdescLeft">&#160;</td><td class="mdescRight">obsolete: should use get_list_of_particles_from_decay instead  <a href="namespace_f_c_c_analyses_1_1_m_c_particle.html#a6c2cfb92bfa1b49b5eb47b6d90dba462">More...</a><br /></td></tr>
 <tr class="separator:a6c2cfb92bfa1b49b5eb47b6d90dba462"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a409acf27e6748cee50e45fd660d399a5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html#a409acf27e6748cee50e45fd660d399a5">get_lepton_origin</a> (int idx, const ROOT::VecOps::RVec&lt; edm4hep::MCParticleData &gt; &amp;in, const ROOT::VecOps::RVec&lt; int &gt; &amp;<a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html#aa02d4d5135ed1995c42677b73453f31d">ind</a>)</td></tr>
+<tr class="memitem:a409acf27e6748cee50e45fd660d399a5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html#a409acf27e6748cee50e45fd660d399a5">get_lepton_origin</a> (int idx, const ROOT::VecOps::RVec&lt; edm4hep::MCParticleData &gt; &amp;in, const ROOT::VecOps::RVec&lt; int &gt; &amp;ind)</td></tr>
 <tr class="memdesc:a409acf27e6748cee50e45fd660d399a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">return the pdg ID of the parent of a lepton (pre-FSR)  <a href="namespace_f_c_c_analyses_1_1_m_c_particle.html#a409acf27e6748cee50e45fd660d399a5">More...</a><br /></td></tr>
 <tr class="separator:a409acf27e6748cee50e45fd660d399a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a35800bdcc6f93152bb9c715fb132e2e2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html#a35800bdcc6f93152bb9c715fb132e2e2">get_lepton_origin</a> (const edm4hep::MCParticleData &amp;p, const ROOT::VecOps::RVec&lt; edm4hep::MCParticleData &gt; &amp;in, const ROOT::VecOps::RVec&lt; int &gt; &amp;<a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html#aa02d4d5135ed1995c42677b73453f31d">ind</a>)</td></tr>
+<tr class="memitem:a35800bdcc6f93152bb9c715fb132e2e2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html#a35800bdcc6f93152bb9c715fb132e2e2">get_lepton_origin</a> (const edm4hep::MCParticleData &amp;p, const ROOT::VecOps::RVec&lt; edm4hep::MCParticleData &gt; &amp;in, const ROOT::VecOps::RVec&lt; int &gt; &amp;ind)</td></tr>
 <tr class="separator:a35800bdcc6f93152bb9c715fb132e2e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a043530e79e7c406f8f6be61f49752f71"><td class="memItemLeft" align="right" valign="top">ROOT::VecOps::RVec&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html#a043530e79e7c406f8f6be61f49752f71">get_leptons_origin</a> (const ROOT::VecOps::RVec&lt; edm4hep::MCParticleData &gt; &amp;particles, const ROOT::VecOps::RVec&lt; edm4hep::MCParticleData &gt; &amp;in, const ROOT::VecOps::RVec&lt; int &gt; &amp;<a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html#aa02d4d5135ed1995c42677b73453f31d">ind</a>)</td></tr>
+<tr class="memitem:a043530e79e7c406f8f6be61f49752f71"><td class="memItemLeft" align="right" valign="top">ROOT::VecOps::RVec&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html#a043530e79e7c406f8f6be61f49752f71">get_leptons_origin</a> (const ROOT::VecOps::RVec&lt; edm4hep::MCParticleData &gt; &amp;particles, const ROOT::VecOps::RVec&lt; edm4hep::MCParticleData &gt; &amp;in, const ROOT::VecOps::RVec&lt; int &gt; &amp;ind)</td></tr>
 <tr class="separator:a043530e79e7c406f8f6be61f49752f71"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aad3fc05850bd780367a8e23ad085d6eb"><td class="memItemLeft" align="right" valign="top">ROOT::VecOps::RVec&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html#aad3fc05850bd780367a8e23ad085d6eb">get_parentid</a> (ROOT::VecOps::RVec&lt; int &gt; mcind, ROOT::VecOps::RVec&lt; edm4hep::MCParticleData &gt; <a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html#a072fb3f4de1235b0979572a08242796b">mc</a>, ROOT::VecOps::RVec&lt; int &gt; <a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html#a1f7541af1f27437a74065c38262a1cb9">parents</a>)</td></tr>
-<tr class="separator:aad3fc05850bd780367a8e23ad085d6eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a49ecbbb111282bbaed517d64e74e7d8d"><td class="memItemLeft" align="right" valign="top">ROOT::VecOps::RVec&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html#a49ecbbb111282bbaed517d64e74e7d8d">get_indices_MotherByIndex</a> (int imother, std::vector&lt; int &gt; <a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html#a0bc0dd6f5936400ff2a0fd36e52308b9">m_pdg_daughters</a>, bool <a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html#ab4bbbc7fc8e6bdac6b9a8fc754756b1e">m_stableDaughters</a>, bool <a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html#a4ebcd0f29478a0fa1d15fbaddf31699e">m_chargeConjugateDaughters</a>, bool <a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html#aa54451e09b35432946a0c539c21c4619">m_inclusiveDecay</a>, ROOT::VecOps::RVec&lt; edm4hep::MCParticleData &gt; in, ROOT::VecOps::RVec&lt; int &gt; <a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html#aa02d4d5135ed1995c42677b73453f31d">ind</a>)</td></tr>
-<tr class="separator:a49ecbbb111282bbaed517d64e74e7d8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a5745a7b718b378a506756cd2fed74f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html#a4a5745a7b718b378a506756cd2fed74f">if</a> ((<a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html#aa54451e09b35432946a0c539c21c4619">m_inclusiveDecay</a> &amp;&amp;found.size() &gt;=m_pdg_daughters.size() &amp;&amp;products.size() &gt;=m_pdg_daughters.size())||(!<a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html#aa54451e09b35432946a0c539c21c4619">m_inclusiveDecay</a> &amp;&amp;found.size()==m_pdg_daughters.size() &amp;&amp;products.size()==m_pdg_daughters.size()))</td></tr>
-<tr class="separator:a4a5745a7b718b378a506756cd2fed74f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:a2552e88a54e14c2714b235e16f3bf1a6"><td class="memItemLeft" align="right" valign="top">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD:analyzers/dataframe/MCParticle.h=======&gt; &gt; &gt; &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html#a2552e88a54e14c2714b235e16f3bf1a6">master</a></td></tr>
-<tr class="separator:a2552e88a54e14c2714b235e16f3bf1a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a064dac415d961f8cdfd612b8a09733d4"><td class="memItemLeft" align="right" valign="top">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD:analyzers/dataframe/MCParticle.h=======&gt; &gt; &gt; &gt; &gt; &gt; std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html#a064dac415d961f8cdfd612b8a09733d4">pdg_daughters</a></td></tr>
-<tr class="separator:a064dac415d961f8cdfd612b8a09733d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a14a9364964afc945992a06cae0d3b41f"><td class="memItemLeft" align="right" valign="top">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD:analyzers/dataframe/MCParticle.h=======&gt; &gt; &gt; &gt; &gt; &gt; std::vector&lt; int &gt; bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html#a14a9364964afc945992a06cae0d3b41f">stableDaughters</a></td></tr>
-<tr class="separator:a14a9364964afc945992a06cae0d3b41f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7b047918539a056cc3de770ffd82c4c0"><td class="memItemLeft" align="right" valign="top">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD:analyzers/dataframe/MCParticle.h=======&gt; &gt; &gt; &gt; &gt; &gt; std::vector&lt; int &gt; bool bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html#a7b047918539a056cc3de770ffd82c4c0">chargeConjugateMother</a></td></tr>
-<tr class="separator:a7b047918539a056cc3de770ffd82c4c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ee1b9344572bd6e74952c17b79f735b"><td class="memItemLeft" align="right" valign="top">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD:analyzers/dataframe/MCParticle.h=======&gt; &gt; &gt; &gt; &gt; &gt; std::vector&lt; int &gt; bool bool bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html#a1ee1b9344572bd6e74952c17b79f735b">chargeConjugateDaughters</a></td></tr>
-<tr class="separator:a1ee1b9344572bd6e74952c17b79f735b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a825a6b500065172c31bd6a8a99e42d94"><td class="memItemLeft" align="right" valign="top">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD:analyzers/dataframe/MCParticle.h=======&gt; &gt; &gt; &gt; &gt; &gt; std::vector&lt; int &gt; bool bool bool bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html#a825a6b500065172c31bd6a8a99e42d94">inclusiveDecay</a></td></tr>
-<tr class="separator:a825a6b500065172c31bd6a8a99e42d94"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa5059093c3de2b0e14579729153498e0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html#aa5059093c3de2b0e14579729153498e0">m_pdg_mother</a></td></tr>
-<tr class="separator:aa5059093c3de2b0e14579729153498e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0bc0dd6f5936400ff2a0fd36e52308b9"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html#a0bc0dd6f5936400ff2a0fd36e52308b9">m_pdg_daughters</a></td></tr>
-<tr class="separator:a0bc0dd6f5936400ff2a0fd36e52308b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab4bbbc7fc8e6bdac6b9a8fc754756b1e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html#ab4bbbc7fc8e6bdac6b9a8fc754756b1e">m_stableDaughters</a></td></tr>
-<tr class="separator:ab4bbbc7fc8e6bdac6b9a8fc754756b1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a80bc0aea33855a8128ef569211a18cd9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html#a80bc0aea33855a8128ef569211a18cd9">m_chargeConjugateMother</a></td></tr>
-<tr class="separator:a80bc0aea33855a8128ef569211a18cd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4ebcd0f29478a0fa1d15fbaddf31699e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html#a4ebcd0f29478a0fa1d15fbaddf31699e">m_chargeConjugateDaughters</a></td></tr>
-<tr class="separator:a4ebcd0f29478a0fa1d15fbaddf31699e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa54451e09b35432946a0c539c21c4619"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html#aa54451e09b35432946a0c539c21c4619">m_inclusiveDecay</a></td></tr>
-<tr class="separator:aa54451e09b35432946a0c539c21c4619"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa02d4d5135ed1995c42677b73453f31d"><td class="memItemLeft" align="right" valign="top">ROOT::VecOps::RVec&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html#aa02d4d5135ed1995c42677b73453f31d">ind</a></td></tr>
-<tr class="separator:aa02d4d5135ed1995c42677b73453f31d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a27018c47a4d8f91e96cc5a41278430aa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html#a2552e88a54e14c2714b235e16f3bf1a6">master</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html#a27018c47a4d8f91e96cc5a41278430aa">__pad0__</a></td></tr>
-<tr class="separator:a27018c47a4d8f91e96cc5a41278430aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a072fb3f4de1235b0979572a08242796b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html#a2552e88a54e14c2714b235e16f3bf1a6">master</a> ROOT::VecOps::RVec&lt; edm4hep::MCParticleData &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html#a072fb3f4de1235b0979572a08242796b">mc</a></td></tr>
-<tr class="separator:a072fb3f4de1235b0979572a08242796b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1f7541af1f27437a74065c38262a1cb9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html#a2552e88a54e14c2714b235e16f3bf1a6">master</a> ROOT::VecOps::RVec&lt; edm4hep::MCParticleData &gt; ROOT::VecOps::RVec&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html#a1f7541af1f27437a74065c38262a1cb9">parents</a></td></tr>
-<tr class="separator:a1f7541af1f27437a74065c38262a1cb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a805812721ff054a8512d873ecdc24303"><td class="memItemLeft" align="right" valign="top">return&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html#a805812721ff054a8512d873ecdc24303">result</a></td></tr>
-<tr class="separator:a805812721ff054a8512d873ecdc24303"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="ac2c1305df7223fb14bae082b708ff9d9" name="ac2c1305df7223fb14bae082b708ff9d9"></a>
@@ -301,36 +261,6 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>return the angle (3D) between two MCParticles : </p>
-
-</div>
-</div>
-<a id="a9990421a544f662d780854dc0a0215dd" name="a9990421a544f662d780854dc0a0215dd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9990421a544f662d780854dc0a0215dd">&#9670;&nbsp;</a></span>DeltaRBetweenTwoMCParticles()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">float FCCAnalyses::MCParticle::DeltaRBetweenTwoMCParticles </td>
-          <td>(</td>
-          <td class="paramtype">edm4hep::MCParticleData&#160;</td>
-          <td class="paramname"><em>p1</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">edm4hep::MCParticleData&#160;</td>
-          <td class="paramname"><em>p2</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>return delta R (3D) between two MCParticles : </p>
 
 </div>
 </div>
@@ -573,7 +503,7 @@ Variables</h2></td></tr>
 </div>
 </div>
 <a id="a49ecbbb111282bbaed517d64e74e7d8d" name="a49ecbbb111282bbaed517d64e74e7d8d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a49ecbbb111282bbaed517d64e74e7d8d">&#9670;&nbsp;</a></span>get_indices_MotherByIndex() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a49ecbbb111282bbaed517d64e74e7d8d">&#9670;&nbsp;</a></span>get_indices_MotherByIndex()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -619,52 +549,6 @@ Variables</h2></td></tr>
           <td></td>
           <td class="paramtype">ROOT::VecOps::RVec&lt; int &gt;&#160;</td>
           <td class="paramname"><em>ind</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a1104a07df61b131792fe05324db45047" name="a1104a07df61b131792fe05324db45047"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1104a07df61b131792fe05324db45047">&#9670;&nbsp;</a></span>get_indices_MotherByIndex() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">ROOT::VecOps::RVec&lt; int &gt; FCCAnalyses::MCParticle::get_indices_MotherByIndex </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>imother</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::vector&lt; int &gt;&#160;</td>
-          <td class="paramname"><em>m_pdg_daughters</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>m_stableDaughters</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>m_chargeConjugateDaughters</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>m_inclusiveDecay</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -945,6 +829,8 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>return the parent index of a given list of MC particles </p>
 
 </div>
 </div>
@@ -1248,24 +1134,6 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a4a5745a7b718b378a506756cd2fed74f" name="a4a5745a7b718b378a506756cd2fed74f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4a5745a7b718b378a506756cd2fed74f">&#9670;&nbsp;</a></span>if()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">FCCAnalyses::MCParticle::if </td>
-          <td>(</td>
-          <td class="paramtype">(<a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html#aa54451e09b35432946a0c539c21c4619">m_inclusiveDecay</a> &amp;&amp;found.size() &gt;=m_pdg_daughters.size() &amp;&amp;products.size() &gt;=m_pdg_daughters.size())||(!<a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html#aa54451e09b35432946a0c539c21c4619">m_inclusiveDecay</a> &amp;&amp;found.size()==m_pdg_daughters.size() &amp;&amp;products.size()==m_pdg_daughters.size())&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a6c2cfb92bfa1b49b5eb47b6d90dba462" name="a6c2cfb92bfa1b49b5eb47b6d90dba462"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6c2cfb92bfa1b49b5eb47b6d90dba462">&#9670;&nbsp;</a></span>list_of_particles_from_decay()</h2>
 
@@ -1368,34 +1236,6 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a84485a75003fcca8f4666e269aee11c8" name="a84485a75003fcca8f4666e269aee11c8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a84485a75003fcca8f4666e269aee11c8">&#9670;&nbsp;</a></span>operator()()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">ROOT::VecOps::RVec&lt; int &gt; FCCAnalyses::MCParticle::operator() </td>
-          <td>(</td>
-          <td class="paramtype">ROOT::VecOps::RVec&lt; edm4hep::MCParticleData &gt;&#160;</td>
-          <td class="paramname"><em>in</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">ROOT::VecOps::RVec&lt; int &gt;&#160;</td>
-          <td class="paramname"><em>ind</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a04c7af9cdc145bc547aaf2b141d0fba6" name="a04c7af9cdc145bc547aaf2b141d0fba6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a04c7af9cdc145bc547aaf2b141d0fba6">&#9670;&nbsp;</a></span>sel_byIndex()</h2>
 
@@ -1426,250 +1266,11 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<h2 class="groupheader">Variable Documentation</h2>
-<a id="a27018c47a4d8f91e96cc5a41278430aa" name="a27018c47a4d8f91e96cc5a41278430aa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a27018c47a4d8f91e96cc5a41278430aa">&#9670;&nbsp;</a></span>__pad0__</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html#a2552e88a54e14c2714b235e16f3bf1a6">master</a> FCCAnalyses::MCParticle::__pad0__</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a1ee1b9344572bd6e74952c17b79f735b" name="a1ee1b9344572bd6e74952c17b79f735b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1ee1b9344572bd6e74952c17b79f735b">&#9670;&nbsp;</a></span>chargeConjugateDaughters</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD:analyzers/dataframe/MCParticle.h ======= &gt;&gt;&gt;&gt;&gt;&gt; std::vector&lt;int&gt; bool bool bool FCCAnalyses::MCParticle::chargeConjugateDaughters</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a7b047918539a056cc3de770ffd82c4c0" name="a7b047918539a056cc3de770ffd82c4c0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7b047918539a056cc3de770ffd82c4c0">&#9670;&nbsp;</a></span>chargeConjugateMother</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD:analyzers/dataframe/MCParticle.h ======= &gt;&gt;&gt;&gt;&gt;&gt; std::vector&lt;int&gt; bool bool FCCAnalyses::MCParticle::chargeConjugateMother</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a825a6b500065172c31bd6a8a99e42d94" name="a825a6b500065172c31bd6a8a99e42d94"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a825a6b500065172c31bd6a8a99e42d94">&#9670;&nbsp;</a></span>inclusiveDecay</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD:analyzers/dataframe/MCParticle.h ======= &gt;&gt;&gt;&gt;&gt;&gt; std::vector&lt;int&gt; bool bool bool bool FCCAnalyses::MCParticle::inclusiveDecay</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aa02d4d5135ed1995c42677b73453f31d" name="aa02d4d5135ed1995c42677b73453f31d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa02d4d5135ed1995c42677b73453f31d">&#9670;&nbsp;</a></span>ind</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">ROOT::VecOps::RVec&lt;int&gt; FCCAnalyses::MCParticle::ind</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a4ebcd0f29478a0fa1d15fbaddf31699e" name="a4ebcd0f29478a0fa1d15fbaddf31699e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4ebcd0f29478a0fa1d15fbaddf31699e">&#9670;&nbsp;</a></span>m_chargeConjugateDaughters</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool FCCAnalyses::MCParticle::m_chargeConjugateDaughters</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a80bc0aea33855a8128ef569211a18cd9" name="a80bc0aea33855a8128ef569211a18cd9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a80bc0aea33855a8128ef569211a18cd9">&#9670;&nbsp;</a></span>m_chargeConjugateMother</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool FCCAnalyses::MCParticle::m_chargeConjugateMother</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aa54451e09b35432946a0c539c21c4619" name="aa54451e09b35432946a0c539c21c4619"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa54451e09b35432946a0c539c21c4619">&#9670;&nbsp;</a></span>m_inclusiveDecay</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool FCCAnalyses::MCParticle::m_inclusiveDecay</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a0bc0dd6f5936400ff2a0fd36e52308b9" name="a0bc0dd6f5936400ff2a0fd36e52308b9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0bc0dd6f5936400ff2a0fd36e52308b9">&#9670;&nbsp;</a></span>m_pdg_daughters</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt;int&gt; FCCAnalyses::MCParticle::m_pdg_daughters</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aa5059093c3de2b0e14579729153498e0" name="aa5059093c3de2b0e14579729153498e0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa5059093c3de2b0e14579729153498e0">&#9670;&nbsp;</a></span>m_pdg_mother</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int FCCAnalyses::MCParticle::m_pdg_mother</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ab4bbbc7fc8e6bdac6b9a8fc754756b1e" name="ab4bbbc7fc8e6bdac6b9a8fc754756b1e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab4bbbc7fc8e6bdac6b9a8fc754756b1e">&#9670;&nbsp;</a></span>m_stableDaughters</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool FCCAnalyses::MCParticle::m_stableDaughters</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a2552e88a54e14c2714b235e16f3bf1a6" name="a2552e88a54e14c2714b235e16f3bf1a6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2552e88a54e14c2714b235e16f3bf1a6">&#9670;&nbsp;</a></span>master</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD:analyzers/dataframe/MCParticle.h ======= }; struct get_indices_ExclusiveDecay: get_indices{ get_indices_ExclusiveDecay( int pdg_mother, std::vector&lt;int&gt; <a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html#a064dac415d961f8cdfd612b8a09733d4">pdg_daughters</a>, bool <a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html#a14a9364964afc945992a06cae0d3b41f">stableDaughters</a>, bool chargeConjugate ) ; &gt;&gt;&gt;&gt;&gt;&gt; FCCAnalyses::MCParticle::master</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a072fb3f4de1235b0979572a08242796b" name="a072fb3f4de1235b0979572a08242796b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a072fb3f4de1235b0979572a08242796b">&#9670;&nbsp;</a></span>mc</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html#a2552e88a54e14c2714b235e16f3bf1a6">master</a> ROOT::VecOps::RVec&lt;edm4hep::MCParticleData&gt; FCCAnalyses::MCParticle::mc</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a1f7541af1f27437a74065c38262a1cb9" name="a1f7541af1f27437a74065c38262a1cb9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1f7541af1f27437a74065c38262a1cb9">&#9670;&nbsp;</a></span>parents</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html#a2552e88a54e14c2714b235e16f3bf1a6">master</a> ROOT::VecOps::RVec&lt;edm4hep::MCParticleData&gt; ROOT::VecOps::RVec&lt;int&gt; FCCAnalyses::MCParticle::parents</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a064dac415d961f8cdfd612b8a09733d4" name="a064dac415d961f8cdfd612b8a09733d4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a064dac415d961f8cdfd612b8a09733d4">&#9670;&nbsp;</a></span>pdg_daughters</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD:analyzers/dataframe/MCParticle.h ======= &gt;&gt;&gt;&gt;&gt;&gt; std::vector&lt;int&gt; FCCAnalyses::MCParticle::pdg_daughters</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a805812721ff054a8512d873ecdc24303" name="a805812721ff054a8512d873ecdc24303"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a805812721ff054a8512d873ecdc24303">&#9670;&nbsp;</a></span>result</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">return FCCAnalyses::MCParticle::result</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a14a9364964afc945992a06cae0d3b41f" name="a14a9364964afc945992a06cae0d3b41f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a14a9364964afc945992a06cae0d3b41f">&#9670;&nbsp;</a></span>stableDaughters</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD:analyzers/dataframe/MCParticle.h ======= &gt;&gt;&gt;&gt;&gt;&gt; std::vector&lt;int&gt; bool FCCAnalyses::MCParticle::stableDaughters</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.15-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Oct 12 2022 15:38:37 for FCCAnalyses by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Oct 12 2022 15:39:55 for FCCAnalyses by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.9.3
 </small></address>
