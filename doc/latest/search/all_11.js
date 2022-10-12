@@ -24,5 +24,6 @@ var searchData=
   ['setup_5fweaver_21',['setup_weaver',['../namespace_f_c_c_analyses_1_1_jet_flavour_utils.html#a966bf174f599b03ebb6ae9e71a29ef35',1,'FCCAnalyses::JetFlavourUtils']]],
   ['smearing_2ecc_22',['Smearing.cc',['../_smearing_8cc.html',1,'']]],
   ['smearing_2eh_23',['Smearing.h',['../_smearing_8h.html',1,'']]],
-  ['sphericityfit_24',['sphericityFit',['../struct_f_c_c_analyses_1_1_algorithms_1_1sphericity_fit.html',1,'FCCAnalyses::Algorithms::sphericityFit'],['../struct_f_c_c_analyses_1_1_algorithms_1_1sphericity_fit.html#a024b324a41bea3f3c760fceb01f6f419',1,'FCCAnalyses::Algorithms::sphericityFit::sphericityFit()']]]
+  ['sphericityfit_24',['sphericityFit',['../struct_f_c_c_analyses_1_1_algorithms_1_1sphericity_fit.html',1,'FCCAnalyses::Algorithms::sphericityFit'],['../struct_f_c_c_analyses_1_1_algorithms_1_1sphericity_fit.html#a024b324a41bea3f3c760fceb01f6f419',1,'FCCAnalyses::Algorithms::sphericityFit::sphericityFit()']]],
+  ['stabledaughters_25',['stableDaughters',['../namespace_f_c_c_analyses_1_1_m_c_particle.html#a14a9364964afc945992a06cae0d3b41f',1,'FCCAnalyses::MCParticle']]]
 ];

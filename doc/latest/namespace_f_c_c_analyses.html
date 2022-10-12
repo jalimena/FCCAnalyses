@@ -73,6 +73,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#namespaces">Namespaces</a> &#124;
+<a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle"><div class="title">FCCAnalyses Namespace Reference</div></div>
 </div><!--header-->
@@ -118,6 +119,15 @@ Namespaces</h2></td></tr>
 <tr class="memitem:namespace_f_c_c_analyses_1_1_vertexing_utils"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_f_c_c_analyses_1_1_vertexing_utils.html">VertexingUtils</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ab74255cd466e9940ce534dcd2902fb93"><td class="memItemLeft" align="right" valign="top">ROOT::VecOps::RVec&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_f_c_c_analyses.html#ab74255cd466e9940ce534dcd2902fb93">get_indices_ExclusiveDecay_MotherByIndex</a> (int imother, std::vector&lt; int &gt; m_pdg_daughters, bool m_stableDaughters, ROOT::VecOps::RVec&lt; edm4hep::MCParticleData &gt; in, ROOT::VecOps::RVec&lt; int &gt; ind)</td></tr>
+<tr class="separator:ab74255cd466e9940ce534dcd2902fb93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4eee08f396bb77cb833bda3f9d644bb1"><td class="memItemLeft" align="right" valign="top">ROOT::VecOps::RVec&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_f_c_c_analyses.html#a4eee08f396bb77cb833bda3f9d644bb1">AngleBetweenTwoMCParticles</a> (ROOT::VecOps::RVec&lt; edm4hep::MCParticleData &gt; p1, ROOT::VecOps::RVec&lt; edm4hep::MCParticleData &gt; p2)</td></tr>
+<tr class="separator:a4eee08f396bb77cb833bda3f9d644bb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d2db486d19c0816e75a85b98a1dcc17"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_f_c_c_analyses.html#a7d2db486d19c0816e75a85b98a1dcc17">get_lepton_origin</a> (const edm4hep::MCParticleData &amp;p, const ROOT::VecOps::RVec&lt; edm4hep::MCParticleData &gt; &amp;in, const ROOT::VecOps::RVec&lt; int &gt; &amp;ind)</td></tr>
+<tr class="separator:a7d2db486d19c0816e75a85b98a1dcc17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
 <tr class="memitem:a9a05f669700b7d69301e3e267ec49761"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="class_weaver_interface.html">WeaverInterface</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_f_c_c_analyses.html#a9a05f669700b7d69301e3e267ec49761">gWeaver</a></td></tr>
@@ -133,7 +143,116 @@ Variables</h2></td></tr>
 <p >This represents a set functions and utilities to perfom jet tagging from a list of jets.</p>
 <p >This represents a set functions and utilities to access and perform operations on the <a class="el" href="namespace_f_c_c_analyses_1_1_m_c_particle.html">MCParticle</a> collection.</p>
 <p >This represents a set functions and utilities to perfom vertexing from a list of tracks. </p>
-</div><h2 class="groupheader">Variable Documentation</h2>
+</div><h2 class="groupheader">Function Documentation</h2>
+<a id="a4eee08f396bb77cb833bda3f9d644bb1" name="a4eee08f396bb77cb833bda3f9d644bb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4eee08f396bb77cb833bda3f9d644bb1">&#9670;&nbsp;</a></span>AngleBetweenTwoMCParticles()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ROOT::VecOps::RVec&lt; float &gt; FCCAnalyses::AngleBetweenTwoMCParticles </td>
+          <td>(</td>
+          <td class="paramtype">ROOT::VecOps::RVec&lt; edm4hep::MCParticleData &gt;&#160;</td>
+          <td class="paramname"><em>p1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ROOT::VecOps::RVec&lt; edm4hep::MCParticleData &gt;&#160;</td>
+          <td class="paramname"><em>p2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab74255cd466e9940ce534dcd2902fb93" name="ab74255cd466e9940ce534dcd2902fb93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab74255cd466e9940ce534dcd2902fb93">&#9670;&nbsp;</a></span>get_indices_ExclusiveDecay_MotherByIndex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ROOT::VecOps::RVec&lt; int &gt; FCCAnalyses::get_indices_ExclusiveDecay_MotherByIndex </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>imother</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; int &gt;&#160;</td>
+          <td class="paramname"><em>m_pdg_daughters</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>m_stableDaughters</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ROOT::VecOps::RVec&lt; edm4hep::MCParticleData &gt;&#160;</td>
+          <td class="paramname"><em>in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ROOT::VecOps::RVec&lt; int &gt;&#160;</td>
+          <td class="paramname"><em>ind</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7d2db486d19c0816e75a85b98a1dcc17" name="a7d2db486d19c0816e75a85b98a1dcc17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d2db486d19c0816e75a85b98a1dcc17">&#9670;&nbsp;</a></span>get_lepton_origin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int FCCAnalyses::get_lepton_origin </td>
+          <td>(</td>
+          <td class="paramtype">const edm4hep::MCParticleData &amp;&#160;</td>
+          <td class="paramname"><em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const ROOT::VecOps::RVec&lt; edm4hep::MCParticleData &gt; &amp;&#160;</td>
+          <td class="paramname"><em>in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const ROOT::VecOps::RVec&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>ind</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
 <a id="a9a05f669700b7d69301e3e267ec49761" name="a9a05f669700b7d69301e3e267ec49761"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9a05f669700b7d69301e3e267ec49761">&#9670;&nbsp;</a></span>gWeaver</h2>
 
@@ -152,7 +271,7 @@ Variables</h2></td></tr>
 <!-- HTML footer for doxygen 1.8.15-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Oct 12 2022 15:24:55 for FCCAnalyses by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Oct 12 2022 15:38:37 for FCCAnalyses by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.9.3
 </small></address>
