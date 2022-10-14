@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1665735748254,
+  "lastUpdate": 1665735750325,
   "repoUrl": "https://github.com/jalimena/FCCAnalyses",
   "entries": {
     "Benchmark": [
@@ -916,6 +916,50 @@ window.BENCHMARK_DATA = {
             "unit": "Seconds",
             "range": 10,
             "extra": "Analysis path: examples/FCCee/test"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "juliette.alimena@cern.ch",
+            "name": "Juliette Alimena",
+            "username": "jalimena"
+          },
+          "committer": {
+            "email": "juliette.alimena@cern.ch",
+            "name": "Juliette Alimena",
+            "username": "jalimena"
+          },
+          "distinct": true,
+          "id": "ad0b46d6b9dffa362505b778346773a285a64aa4",
+          "message": "runFinal improvements",
+          "timestamp": "2022-10-14T10:12:12+02:00",
+          "tree_id": "3e17fdcef0651062410e1dce4d473c9521ed3c43",
+          "url": "https://github.com/jalimena/FCCAnalyses/commit/ad0b46d6b9dffa362505b778346773a285a64aa4"
+        },
+        "date": 1665735749893,
+        "tool": "customBiggerIsBetter",
+        "benches": [
+          {
+            "name": "nightly | Events processed per second: case-studies/analysis_example/scripts",
+            "value": 11.167138000752196,
+            "unit": "Evt/s"
+          },
+          {
+            "name": "nightly | Events processed per second: examples/FCCee/higgs/mH-recoil/mumu",
+            "value": 9.395882495823402,
+            "unit": "Evt/s"
+          },
+          {
+            "name": "nightly | Events processed per second: examples/FCCee/flavour/Bc2TauNu",
+            "value": 6.977523588525497,
+            "unit": "Evt/s"
+          },
+          {
+            "name": "nightly | Events processed per second: examples/FCCee/test",
+            "value": 9.498582958979128,
+            "unit": "Evt/s"
           }
         ]
       }
