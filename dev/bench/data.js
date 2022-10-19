@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1666168998776,
+  "lastUpdate": 1666169000304,
   "repoUrl": "https://github.com/jalimena/FCCAnalyses",
   "entries": {
     "Benchmark": [
@@ -1204,6 +1204,50 @@ window.BENCHMARK_DATA = {
             "unit": "Seconds",
             "range": 10,
             "extra": "Analysis path: examples/FCCee/test"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "clement.helsens@cern.ch",
+            "name": "Clement Helsens",
+            "username": "clementhelsens"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": false,
+          "id": "3ec6b2fe5557514057099b4a5f1aa0f56e568200",
+          "message": "Merge pull request #214 from EmanuelPerez/master\n\nUpdates of FCCAnalyses tutorial files for vertexing and tau to 3 mu",
+          "timestamp": "2022-10-18T20:28:17+02:00",
+          "tree_id": "e91f7eaf0106a1a88db8658e75029887556641fb",
+          "url": "https://github.com/jalimena/FCCAnalyses/commit/3ec6b2fe5557514057099b4a5f1aa0f56e568200"
+        },
+        "date": 1666168999943,
+        "tool": "customBiggerIsBetter",
+        "benches": [
+          {
+            "name": "prod | Events processed per second: case-studies/analysis_example/scripts",
+            "value": 9.553857402407894,
+            "unit": "Evt/s"
+          },
+          {
+            "name": "prod | Events processed per second: examples/FCCee/higgs/mH-recoil/mumu",
+            "value": 7.946469007303704,
+            "unit": "Evt/s"
+          },
+          {
+            "name": "prod | Events processed per second: examples/FCCee/flavour/Bc2TauNu",
+            "value": 6.252343900022458,
+            "unit": "Evt/s"
+          },
+          {
+            "name": "prod | Events processed per second: examples/FCCee/test",
+            "value": 8.541871555407486,
+            "unit": "Evt/s"
           }
         ]
       }
