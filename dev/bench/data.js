@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1666428116491,
+  "lastUpdate": 1666428118210,
   "repoUrl": "https://github.com/jalimena/FCCAnalyses",
   "entries": {
     "Benchmark": [
@@ -2932,6 +2932,50 @@ window.BENCHMARK_DATA = {
             "unit": "Seconds",
             "range": 10,
             "extra": "Analysis path: examples/FCCee/test"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "juliette.alimena@cern.ch",
+            "name": "Juliette Alimena",
+            "username": "jalimena"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "68d22b7ee8d0861c0fb3555e80bcf97d8317414d",
+          "message": "Merge pull request #4 from jalimena/updateLLHNL2\n\nminor updates for tutorial",
+          "timestamp": "2022-10-22T10:29:41+02:00",
+          "tree_id": "b11fe5fb59285f61edc6cb5ab134566ecde193a4",
+          "url": "https://github.com/jalimena/FCCAnalyses/commit/68d22b7ee8d0861c0fb3555e80bcf97d8317414d"
+        },
+        "date": 1666428117522,
+        "tool": "customBiggerIsBetter",
+        "benches": [
+          {
+            "name": "prod | Events processed per second: case-studies/analysis_example/scripts",
+            "value": 9.616940804132133,
+            "unit": "Evt/s"
+          },
+          {
+            "name": "prod | Events processed per second: examples/FCCee/higgs/mH-recoil/mumu",
+            "value": 8.735348213144709,
+            "unit": "Evt/s"
+          },
+          {
+            "name": "prod | Events processed per second: examples/FCCee/flavour/Bc2TauNu",
+            "value": 7.236345213519253,
+            "unit": "Evt/s"
+          },
+          {
+            "name": "prod | Events processed per second: examples/FCCee/test",
+            "value": 8.746511945119762,
+            "unit": "Evt/s"
           }
         ]
       }
