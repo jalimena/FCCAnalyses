@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1666692665549,
+  "lastUpdate": 1666692667100,
   "repoUrl": "https://github.com/jalimena/FCCAnalyses",
   "entries": {
     "Benchmark": [
@@ -3316,6 +3316,50 @@ window.BENCHMARK_DATA = {
             "unit": "Seconds",
             "range": 10,
             "extra": "Analysis path: examples/FCCee/test"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "juliette.alimena@cern.ch",
+            "name": "Juliette Alimena",
+            "username": "jalimena"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "c82d1b007746b57ba19f67f799aa2e3d7b01744a",
+          "message": "Merge pull request #5 from jalimena/addOld\n\nAdd ALP UFO model, add ability to create Madgraph+Pythia+Delphes samples for HNL(eenu) and ALP(gamma gamma)",
+          "timestamp": "2022-10-25T11:58:54+02:00",
+          "tree_id": "4d832d2cf39579d9f7ad1ebeaebe8a4b93988b3c",
+          "url": "https://github.com/jalimena/FCCAnalyses/commit/c82d1b007746b57ba19f67f799aa2e3d7b01744a"
+        },
+        "date": 1666692666669,
+        "tool": "customBiggerIsBetter",
+        "benches": [
+          {
+            "name": "prod | Events processed per second: case-studies/analysis_example/scripts",
+            "value": 10.894003522087225,
+            "unit": "Evt/s"
+          },
+          {
+            "name": "prod | Events processed per second: examples/FCCee/higgs/mH-recoil/mumu",
+            "value": 9.141916949372055,
+            "unit": "Evt/s"
+          },
+          {
+            "name": "prod | Events processed per second: examples/FCCee/flavour/Bc2TauNu",
+            "value": 6.654134511115446,
+            "unit": "Evt/s"
+          },
+          {
+            "name": "prod | Events processed per second: examples/FCCee/test",
+            "value": 8.821923967173548,
+            "unit": "Evt/s"
           }
         ]
       }
