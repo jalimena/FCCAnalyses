@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1669204327416,
+  "lastUpdate": 1669204329483,
   "repoUrl": "https://github.com/jalimena/FCCAnalyses",
   "entries": {
     "Benchmark": [
@@ -4276,6 +4276,50 @@ window.BENCHMARK_DATA = {
             "unit": "Seconds",
             "range": 10,
             "extra": "Analysis path: examples/FCCee/test"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "juliette.alimena@cern.ch",
+            "name": "Juliette Alimena",
+            "username": "jalimena"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "f87e6dbf0c01b71b5d261b4ced9d57c27ba2c547",
+          "message": "Merge pull request #9 from jalimena/winter2023tests\n\nupdates to run over winter 2023 test v2 samples",
+          "timestamp": "2022-11-23T12:40:34+01:00",
+          "tree_id": "f16d6afeea864e492927b9cf6764db7b87b164f8",
+          "url": "https://github.com/jalimena/FCCAnalyses/commit/f87e6dbf0c01b71b5d261b4ced9d57c27ba2c547"
+        },
+        "date": 1669204328773,
+        "tool": "customBiggerIsBetter",
+        "benches": [
+          {
+            "name": "prod | Events processed per second: case-studies/analysis_example/scripts",
+            "value": 7.643564261889041,
+            "unit": "Evt/s"
+          },
+          {
+            "name": "prod | Events processed per second: examples/FCCee/higgs/mH-recoil/mumu",
+            "value": 6.75301581850948,
+            "unit": "Evt/s"
+          },
+          {
+            "name": "prod | Events processed per second: examples/FCCee/flavour/Bc2TauNu",
+            "value": 5.09235643649176,
+            "unit": "Evt/s"
+          },
+          {
+            "name": "prod | Events processed per second: examples/FCCee/test",
+            "value": 7.208718789511129,
+            "unit": "Evt/s"
           }
         ]
       }
