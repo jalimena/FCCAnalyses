@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1671180718973,
+  "lastUpdate": 1671180720778,
   "repoUrl": "https://github.com/jalimena/FCCAnalyses",
   "entries": {
     "Benchmark": [
@@ -5116,6 +5116,50 @@ window.BENCHMARK_DATA = {
             "unit": "Seconds",
             "range": 10,
             "extra": "Analysis path: examples/FCCee/test"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "juliette.alimena@cern.ch",
+            "name": "Juliette Alimena",
+            "username": "jalimena"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "bafe9a9eb1596af5576c88074530203713d8a863",
+          "message": "Merge pull request #14 from mvoorde/add_ExoticHiggsDecays_MC_analysis\n\nAdd exotic higgs decays mc analysis code and scripts",
+          "timestamp": "2022-12-16T09:39:01+01:00",
+          "tree_id": "7d64351999e7c69c4037b61a7f2b98103fa922c8",
+          "url": "https://github.com/jalimena/FCCAnalyses/commit/bafe9a9eb1596af5576c88074530203713d8a863"
+        },
+        "date": 1671180720334,
+        "tool": "customBiggerIsBetter",
+        "benches": [
+          {
+            "name": "prod | Events processed per second: case-studies/analysis_example/scripts",
+            "value": 11.162819317261299,
+            "unit": "Evt/s"
+          },
+          {
+            "name": "prod | Events processed per second: examples/FCCee/higgs/mH-recoil/mumu",
+            "value": 9.244397362315409,
+            "unit": "Evt/s"
+          },
+          {
+            "name": "prod | Events processed per second: examples/FCCee/flavour/Bc2TauNu",
+            "value": 7.042389239297264,
+            "unit": "Evt/s"
+          },
+          {
+            "name": "prod | Events processed per second: examples/FCCee/test",
+            "value": 9.03936080446118,
+            "unit": "Evt/s"
           }
         ]
       }
