@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1671463054005,
+  "lastUpdate": 1671463055467,
   "repoUrl": "https://github.com/jalimena/FCCAnalyses",
   "entries": {
     "Benchmark": [
@@ -5596,6 +5596,50 @@ window.BENCHMARK_DATA = {
             "unit": "Seconds",
             "range": 10,
             "extra": "Analysis path: examples/FCCee/test"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "juliette.alimena@cern.ch",
+            "name": "Juliette Alimena",
+            "username": "jalimena"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "3ef84ab936215beec19b28bb671def48772cf8f0",
+          "message": "Merge pull request #17 from jalimena/ALPs\n\nALPs in FCCAnalyses",
+          "timestamp": "2022-12-19T16:02:07+01:00",
+          "tree_id": "ddf3f56564ceea5ade0140b79d61000287615c99",
+          "url": "https://github.com/jalimena/FCCAnalyses/commit/3ef84ab936215beec19b28bb671def48772cf8f0"
+        },
+        "date": 1671463055057,
+        "tool": "customBiggerIsBetter",
+        "benches": [
+          {
+            "name": "nightly | Events processed per second: case-studies/analysis_example/scripts",
+            "value": 10.366938556217521,
+            "unit": "Evt/s"
+          },
+          {
+            "name": "nightly | Events processed per second: examples/FCCee/higgs/mH-recoil/mumu",
+            "value": 9.44316239528874,
+            "unit": "Evt/s"
+          },
+          {
+            "name": "nightly | Events processed per second: examples/FCCee/flavour/Bc2TauNu",
+            "value": 6.728889355060563,
+            "unit": "Evt/s"
+          },
+          {
+            "name": "nightly | Events processed per second: examples/FCCee/test",
+            "value": 8.899209582985979,
+            "unit": "Evt/s"
           }
         ]
       }
